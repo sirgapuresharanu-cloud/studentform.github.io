@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #0b0b14;
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e8e8f0;
+  --muted: #9a9ab0;
+  --accent: #8b5cf6;
+  --accent-2: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.2), transparent 40%),
+    var(--bg);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #c4b5fd, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+form {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+br {
+  display: none;
+}
+
+h2,
+h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin: 24px 0 12px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 14px 0 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input::placeholder {
+  color: #6b6b82;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  background: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.18);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%239a9ab0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 1l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+option {
+  background: #14141f;
+  color: var(--text);
+}
+
+/* Fix the white autofill background in Chrome */
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+  box-shadow: 0 0 0 1000px #14141f inset;
+  caret-color: var(--text);
+}
+
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 13px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+  transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#message {
+  margin-top: 16px;
+  min-height: 1.2em;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

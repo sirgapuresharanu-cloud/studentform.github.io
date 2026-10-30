@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>STUDENT FORM</h1>
+
+    <form id="studentForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username"
+                   placeholder="Enter your name" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter your password" required>
+            <br>
+        </div>
+
+        <h2>SELECT YOUR BRANCH</h2>
+
+        <label for="Branch">Choose a branch:</label>
+        <select id="Branch" name="Branch" required>
+            <option value="">Select branch</option>
+            <option value="BCA">BCA</option>
+            <option value="B.SC">B.SC</option>
+            <option value="BE">BE</option>
+            <option value="B COM">B COM</option>
+        </select>
+
+        <h3>SELECT YOUR COURSE</h3>
+
+        <label for="COURSE">Choose a course:</label>
+        <select id="COURSE" name="Course" required>
+            <option value="">Select course</option>
+            <option value="java">Java</option>
+            <option value="html">HTML</option>
+            <option value="python">Python</option>
+            <option value="css">CSS</option>
+        </select>
+        <br>
+
+        <button type="submit">SUBMIT</button>
+
+        <p id="message"></p>
+    </form>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
